@@ -40,7 +40,7 @@ const DeviceList = () => {
       acc[`led${idx + 1}`] = device.status;
       return acc;
     }, {});
-    publishMessage('led/status', ledStatus);
+    publishMessage('led/status', JSON.stringify(ledStatus));
 
     db.ref(`leds/led${index + 1}`).set(updatedDevices[index].status);
   };

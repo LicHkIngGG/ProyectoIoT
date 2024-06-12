@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { db } from '../firebase';
-import { publishMessage } from '../mqtt';
+import { db } from '../api/firebase';
+import { publishMessage } from '../api/mqttClient';
 
 const initialDevices = [
   { name: 'LED 1', status: false, usage: '0W' },
